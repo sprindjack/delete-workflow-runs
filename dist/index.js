@@ -41,9 +41,9 @@ async function run() {
           var ELAPSE_ms = current.getTime() - created_at.getTime();
           var ELAPSE_days = ELAPSE_ms / (1000 * 3600 * 24);
           
-          if (ELAPSE_days >= retain_days) {
+          
             del_runs.push(response.data.workflow_runs[index].id);
-          }
+       
         }
       }
       
@@ -54,7 +54,7 @@ async function run() {
     }
 
     const arr_length = del_runs.length - keep_minimum_runs;
-    if (arr_length < 1) {
+    if (arr_length = 0) {
       console.log(`No workflow runs need to be deleted.`);
     }
     else {
