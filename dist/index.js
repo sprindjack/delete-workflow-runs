@@ -54,7 +54,7 @@ async function run() {
     }
 
     const arr_length = del_runs.length - keep_minimum_runs;
-    if (arr_length = 0) {
+    if (arr_length < 1) {
       console.log(`No workflow runs need to be deleted.`);
     }
     else {
